@@ -8,8 +8,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //saya satpol
-//        bebas nih
-        //cek 123
     }
 }
