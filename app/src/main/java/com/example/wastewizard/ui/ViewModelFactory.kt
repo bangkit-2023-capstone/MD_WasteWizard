@@ -1,14 +1,14 @@
-package com.example.wastewizard
+package com.example.wastewizard.ui
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.wastewizard.data.UserRepository
 import com.example.wastewizard.di.Injection
+import com.example.wastewizard.ui.login.LoginViewModel
+import com.example.wastewizard.ui.welcome.MainViewModel
 
-class SignUp2(private val repository: UserRepository) : ViewModelProvider.NewInstanceFactory() {
+class ViewModelFactory(private val repository: UserRepository) : ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -37,4 +37,3 @@ class SignUp2(private val repository: UserRepository) : ViewModelProvider.NewIns
         }
     }
 }
-

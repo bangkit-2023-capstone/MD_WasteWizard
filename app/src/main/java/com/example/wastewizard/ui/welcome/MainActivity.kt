@@ -1,11 +1,11 @@
-package com.example.wastewizard
+package com.example.wastewizard.ui.welcome
 
 import android.content.Intent
-import android.icu.lang.UCharacter.GraphemeClusterBreak.V
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.example.wastewizard.R
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {

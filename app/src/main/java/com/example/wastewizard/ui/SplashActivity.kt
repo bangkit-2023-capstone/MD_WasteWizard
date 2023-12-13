@@ -3,7 +3,7 @@ package com.example.wastewizard.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.wastewizard.MainActivity
+import com.example.wastewizard.ui.welcome.MainActivity
 import com.example.wastewizard.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
