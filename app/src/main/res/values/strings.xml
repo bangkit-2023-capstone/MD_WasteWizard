@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WasteWizard</string>
+    <string name="btn_getstarted">Get Started</string>
 </resources>
