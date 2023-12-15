@@ -6,12 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import com.example.wastewizard.R
 import com.example.wastewizard.data.pref.UserModel
 import com.example.wastewizard.databinding.ActivityLoginBinding
 import com.example.wastewizard.ui.ViewModelFactory
+import com.example.wastewizard.ui.signup.SignUp2
 import com.example.wastewizard.ui.welcome.MainActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -27,6 +30,14 @@ class LoginActivity : AppCompatActivity() {
 
         setupView()
         setupAction()
+
+        //Text Sign Up
+        val txtSignUp: TextView = findViewById(R.id.txt_signup)
+        txtSignUp.setOnClickListener {
+            Toast.makeText(this@LoginActivity, "Text Sign Up ditekan", Toast.LENGTH_SHORT).show()
+            val moveIntent = Intent(this, SignUp2::class.java)
+            startActivity(moveIntent)
+        }
     }
 
     private fun setupView() {

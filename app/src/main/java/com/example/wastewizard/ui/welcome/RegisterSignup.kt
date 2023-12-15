@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.example.wastewizard.R
+import com.example.wastewizard.ui.login.LoginActivity
 import com.example.wastewizard.ui.signup.SignUp2
+import org.w3c.dom.Text
 
 class RegisterSignup : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +24,14 @@ class RegisterSignup : AppCompatActivity() {
               Toast.makeText(this@RegisterSignup, "Button Email ditekan", Toast.LENGTH_SHORT).show()
               val moveIntent = Intent(this, SignUp2::class.java)
               startActivity(moveIntent)
+        }
+
+        //Text Login
+        val txtUdahLogin: TextView = findViewById(R.id.txt_Udhlogin)
+        txtUdahLogin.setOnClickListener {
+            Toast.makeText(this@RegisterSignup, "Text Login ditekan", Toast.LENGTH_SHORT).show()
+            val moveIntent = Intent(this, LoginActivity::class.java)
+            startActivity(moveIntent)
         }
     }
 
