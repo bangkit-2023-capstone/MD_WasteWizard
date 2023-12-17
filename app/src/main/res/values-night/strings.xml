@@ -2,4 +2,6 @@
 <resources>
     <string name="getStarted">Get Started</string>
     <string name="solusiSampah">Solusi Sampah yang Merajalela</string>
+    <string name="signup">Sign Up</string>
+    <string name="headersignup">Halo,\nSign Up Now!</string>
 </resources>
