@@ -11,4 +11,6 @@
     <string name="login">Login</string>
     <string name="headerlogin">Hello,\nLogin Now!</string>
     <string name="createacc">Belum Punya Akun?</string>
+    <string name="klasifikasi_sampah">Klasifikasi Sampah</string>
+    <string name="pickup_sampah">Pick Up\nSampah</string>
 </resources>
