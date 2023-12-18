@@ -17,4 +17,8 @@
     <string name="signup_google">Lanjutkan dengan Google</string>
     <string name="signup_email">Gunakan email</string>
     <string name="sudahpunyaakun">Sudah Punya Akun?</string>
+    <string name="klasifikasikan_sampahmu">Klasifikasikan Sampahmu!</string>
+    <string name="klasifikasi_desc"><![CDATA[Dengan fitur Klasifikasi kamu dapat membedakan\nyang mana sampah Organik & Anorganik]]></string>
+    <string name="galeri">Galeri</string>
+    <string name="scan">Scan</string>
 </resources>
