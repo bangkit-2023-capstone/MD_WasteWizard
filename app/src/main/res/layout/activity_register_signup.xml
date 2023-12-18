@@ -6,24 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".ui.welcome.RegisterSignup">
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_ww"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
+
     <TextView
         android:id="@+id/registersignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:layout_marginBottom="340dp"
+        android:text="@string/signup"
+        android:textSize="38sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.366" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.595" />
 
-    <Button
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup_lebihmudah"
+        app:layout_constraintBottom_toTopOf="@+id/btn_SignGoogle"
+        app:layout_constraintEnd_toEndOf="@+id/registersignup"
+        app:layout_constraintStart_toStartOf="@+id/registersignup"
+        app:layout_constraintTop_toBottomOf="@+id/registersignup"
+        app:layout_constraintVertical_bias="0.269" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_SignGoogle"
         android:layout_width="270dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:text="Lanjutkan dengan Google"
+        android:backgroundTint="@color/dark_green"
+        android:text="@string/signup_google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -36,20 +61,23 @@
         android:layout_width="270dp"
         android:layout_height="48dp"
         android:layout_gravity="center"
-        android:text="Gunakan Email atau nomor telpon"
+        app:strokeColor="@color/green"
+        android:background="@android:color/transparent"
+        android:text="@string/signup_email"
+        android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_SignGoogle"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.069" />
 
     <TextView
         android:id="@+id/sudahpunyaakun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
-        android:text="Sudah punya akun?"
+        android:text="@string/sudahpunyaakun"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_SignEmail"
@@ -59,7 +87,8 @@
         android:id="@+id/txt_Udhlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/login"
+        android:textColor="@color/green"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

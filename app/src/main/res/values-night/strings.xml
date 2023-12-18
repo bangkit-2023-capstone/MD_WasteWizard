@@ -12,4 +12,8 @@
     <string name="createacc">Belum Punya Akun?</string>
     <string name="klasifikasi_sampah">Klasifikasi Sampah</string>
     <string name="pickup_sampah">Pick Up\nSampah</string>
+    <string name="signup_lebihmudah">Sign Up sekarang lebih mudah!</string>
+    <string name="signup_google">Lanjutkan dengan Google</string>
+    <string name="signup_email">Gunakan email</string>
+    <string name="sudahpunyaakun">Sudah Punya Akun?</string>
 </resources>
