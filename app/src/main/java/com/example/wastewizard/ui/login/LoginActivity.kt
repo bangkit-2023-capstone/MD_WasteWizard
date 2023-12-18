@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.TextView
@@ -35,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
         val txtSignUp: TextView = findViewById(R.id.txt_signup)
         txtSignUp.setOnClickListener {
             Toast.makeText(this@LoginActivity, "Text Sign Up ditekan", Toast.LENGTH_SHORT).show()
+            Log.d("login", "Login Berhasuk")
             val moveIntent = Intent(this, SignUp2::class.java)
             startActivity(moveIntent)
         }
