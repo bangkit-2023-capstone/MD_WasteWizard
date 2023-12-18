@@ -23,11 +23,11 @@ import com.example.wastewizard.ui.welcome.MainViewModel
 
 class SignUp2: AppCompatActivity() {
 
-    private lateinit var binding: ActivitySignUp2Binding
+    private lateinit var binding: Activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySignUp2Binding.inflate(layoutInflater)
+        binding = .inflate(layoutInflater)
         setContentView(binding.root)
 
         setupView()
