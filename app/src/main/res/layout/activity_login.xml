@@ -48,7 +48,7 @@
         android:id="@+id/textView3"
         android:layout_width="152dp"
         android:layout_height="48dp"
-        android:text="@string/signup"
+        android:text="@string/login"
         android:textAlignment="center"
         android:textSize="32sp"
         android:textStyle="bold"
@@ -161,7 +161,7 @@
         android:id="@+id/belumpunyaakun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
+        android:layout_marginStart="116dp"
         android:layout_marginBottom="56dp"
         android:text="@string/createacc"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -178,10 +178,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/belumpunyaakun"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toTopOf="@+id/belumpunyaakun"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
