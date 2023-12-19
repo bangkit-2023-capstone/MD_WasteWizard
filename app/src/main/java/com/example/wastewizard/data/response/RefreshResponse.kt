@@ -14,7 +14,7 @@ data class RefreshResponse(
 	val message: String? = null
 )
 
-data class LoginResult(
+data class LoginResult2(
 
 	@field:SerializedName("token_type")
 	val tokenType: String? = null,
@@ -29,7 +29,7 @@ data class LoginResult(
 	val token: String? = null
 )
 
-data class User(
+data class User2(
 
 	@field:SerializedName("updated_at")
 	val updatedAt: String? = null,

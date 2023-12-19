@@ -30,21 +30,19 @@ interface ApiService {
     @FormUrlEncoded
     @POST("logout")
     suspend fun logout(
-        @Header("message") message: String,
+        @Header("token") token: String,
     ): LogoutResponse
 
     @FormUrlEncoded
-    @POST("profile")
+    @POST("me")
     suspend fun profile(
-        @Field("name") name: String,
-        @Field("email") email: String
+        @Field("token") token: String
     ): ProfileResponse
 
     @FormUrlEncoded
     @POST("refresh")
     suspend fun refresh(
-        @Field("name") name: String,
-        @Field("email") email: String
+        @Field("token") token: String
     ): RefreshResponse
 
     @FormUrlEncoded

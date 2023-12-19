@@ -3,18 +3,25 @@ package com.example.wastewizard.ui.signup
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wastewizard.R
 import com.example.wastewizard.databinding.ActivitySignUp2Binding
+import com.example.wastewizard.ui.ViewModelFactory
 import com.example.wastewizard.ui.login.LoginActivity
+import com.example.wastewizard.ui.viewmodel.LoginViewModel
+import com.example.wastewizard.ui.viewmodel.SignUp2ViewModel
 
 class SignUp2: AppCompatActivity() {
-
+    private val viewModel by viewModels<SignUp2ViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
     private lateinit var binding: ActivitySignUp2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,10 +57,14 @@ class SignUp2: AppCompatActivity() {
     private fun setupAction() {
         binding.signupButton.setOnClickListener {
             val email = binding.emailEditText.text.toString()
+            val name = binding.usernameEditText.text.toString()
+            val password=binding.passwordEditText.text.toString()
+            viewModel.userRegister(name, email, password)
+            Log.d("Login", "$name & $email & $password")
 
             AlertDialog.Builder(this).apply {
                 setTitle("Yeah!")
-                setMessage("Akun dengan $email sudah jadi nih. Yuk, login dan belajar coding.")
+                setMessage("Akun dengan $email sudah jadi nih. Saatnya kita atasi sampah di muka bumi!.")
                 setPositiveButton("Lanjut") { _, _ ->
                     finish()
                 }
