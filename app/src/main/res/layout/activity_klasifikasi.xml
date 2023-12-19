@@ -53,7 +53,7 @@
         android:layout_margin="8dp"
         android:layout_marginTop="8dp"
         app:cardCornerRadius="45dp"
-        app:cardElevation="70dp"
+        app:cardElevation="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
