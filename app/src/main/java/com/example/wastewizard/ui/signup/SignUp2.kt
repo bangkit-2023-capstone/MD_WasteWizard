@@ -12,9 +12,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wastewizard.R
+import com.example.wastewizard.ResultState
 import com.example.wastewizard.databinding.ActivitySignUp2Binding
 import com.example.wastewizard.ui.ViewModelFactory
 import com.example.wastewizard.ui.login.LoginActivity
+import com.example.wastewizard.ui.main.DashboardActivity
 import com.example.wastewizard.ui.viewmodel.LoginViewModel
 import com.example.wastewizard.ui.viewmodel.SignUp2ViewModel
 
@@ -59,18 +61,41 @@ class SignUp2: AppCompatActivity() {
             val email = binding.emailEditText.text.toString()
             val name = binding.usernameEditText.text.toString()
             val password=binding.passwordEditText.text.toString()
-            viewModel.userRegister(name, email, password)
-            Log.d("Login", "$name & $email & $password")
-
-            AlertDialog.Builder(this).apply {
-                setTitle("Yeah!")
-                setMessage("Akun dengan $email sudah jadi nih. Saatnya kita atasi sampah di muka bumi!.")
-                setPositiveButton("Lanjut") { _, _ ->
-                    finish()
+            viewModel.userRegister(name, email, password).observe(this){ result ->
+                if (result != null) {
+                    when (result) {
+                        is ResultState.Loading -> {
+//                            showLoading(true)
+                            Log.d("register", "$name & $email & $password")
+                        }
+                        is ResultState.Success -> {
+//                            showToast(result.data.message)
+//                            showLoading(false)
+                            Log.d("Register Sukses", "$name & $email & $password")
+//                            setupAction(result.data.loginResult)
+                            AlertDialog.Builder(this).apply {
+                                setTitle("Yeah!")
+                                setMessage("Anda berhasil register. Silahkan Login!")
+                                setPositiveButton("Lanjut Login") { _, _ ->
+                                    val intent = Intent(context, LoginActivity::class.java)
+                                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                    startActivity(intent)
+                                    finish()
+                                }
+                                create()
+                                show()
+                            }
+                        }
+                        is ResultState.Error -> {
+//                            showToast(result.error)
+//                            wrongPassword()
+//                            showLoading(false)
+                            Log.d("Login Error", "$email & $password")
+                        }
+                    }
                 }
-                create()
-                show()
             }
+            Log.d("Login", "$name & $email & $password")
         }
     }
 }

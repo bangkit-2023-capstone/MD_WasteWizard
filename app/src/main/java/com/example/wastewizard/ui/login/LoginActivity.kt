@@ -94,11 +94,22 @@ class LoginActivity : AppCompatActivity() {
 //                            showToast(result.error)
 //                            wrongPassword()
 //                            showLoading(false)
+                            wrongPassword()
                             Log.d("Login Error", "$email & $password")
                         }
                     }
                 }
             }
+        }
+    }
+    private fun wrongPassword(){
+        val titleWrong = "Uh Oh!"
+        val messageWrong = "Email atau Password kamu salah, silahkan Login Kembali"
+        AlertDialog.Builder(this).apply {
+            setTitle(titleWrong)
+            setMessage(messageWrong)
+            create()
+            show()
         }
     }
 }
