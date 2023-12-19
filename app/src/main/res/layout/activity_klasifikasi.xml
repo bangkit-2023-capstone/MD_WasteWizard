@@ -11,14 +11,14 @@
         android:id="@+id/imageView9"
         android:layout_width="190dp"
         android:layout_height="95dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.277"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo_ww" />
 
     <ImageView
@@ -37,8 +37,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-
+        android:layout_marginBottom="40dp"
         android:text="@string/klasifikasikan_sampahmu"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -82,21 +81,21 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_galeri"
         android:layout_width="124dp"
         android:layout_height="53dp"
         android:layout_marginStart="32dp"
-        android:text="@string/galeri"
-        android:textSize="18sp"
         android:backgroundTint="@color/white"
+        android:text="@string/galeri"
         android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.396" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_scan"
         android:layout_width="124dp"
         android:layout_height="53dp"
         android:layout_marginTop="56dp"
@@ -104,10 +103,22 @@
         android:text="@string/scan"
         android:textSize="18sp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_galeri"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btn_galeri"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:layout_width="285dp"
+        android:layout_height="47dp"
+        android:text="@string/upload"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_scan"
+        app:layout_constraintStart_toStartOf="@+id/btn_galeri"
+        app:layout_constraintTop_toBottomOf="@+id/btn_galeri" />
 </androidx.constraintlayout.widget.ConstraintLayout>
