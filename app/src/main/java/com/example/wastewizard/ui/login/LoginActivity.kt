@@ -2,7 +2,6 @@ package com.example.wastewizard.ui.login
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowInsets
@@ -11,15 +10,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.example.wastewizard.R
 import com.example.wastewizard.ResultState
-import com.example.wastewizard.data.pref.UserModel
 import com.example.wastewizard.databinding.ActivityLoginBinding
 import com.example.wastewizard.ui.ViewModelFactory
 import com.example.wastewizard.ui.main.DashboardActivity
 import com.example.wastewizard.ui.signup.SignUp2
 import com.example.wastewizard.ui.viewmodel.LoginViewModel
-import com.example.wastewizard.ui.welcome.MainActivity
 
 class LoginActivity : AppCompatActivity() {
     private val viewModel by viewModels<LoginViewModel> {
@@ -34,8 +32,6 @@ class LoginActivity : AppCompatActivity() {
 
         setupView()
         setupAction()
-
-
 
         //Text Sign Up
         val txtSignUp: TextView = findViewById(R.id.txt_signup)
@@ -64,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val password=binding.passwordEditText.text.toString()
-//            viewModel.saveSession(UserModel(email, "sample_token"))
+            viewModel.saveSession(email, "sample_token")
             viewModel.postLogin(email, password).observe(this) { result ->
                 if (result != null) {
                     when (result) {
