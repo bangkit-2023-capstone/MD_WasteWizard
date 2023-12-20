@@ -1,5 +1,6 @@
 package com.example.wastewizard.ui.welcome
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +14,7 @@ import com.example.wastewizard.ui.signup.SignUp2
 import org.w3c.dom.Text
 
 class RegisterSignup : AppCompatActivity() {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_signup)
