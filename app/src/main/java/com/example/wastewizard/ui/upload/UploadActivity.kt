@@ -9,6 +9,7 @@ import com.example.wastewizard.data.response.ModelResponse
 import com.example.wastewizard.data.retrofit.APIModel
 import com.example.wastewizard.data.retrofit.ApiService
 import com.example.wastewizard.databinding.ActivityUploadBinding
+import com.example.wastewizard.ui.klasifikasi.KlasifikasiActivity
 import com.example.wastewizard.ui.klasifikasi.reduceFileImage
 import com.example.wastewizard.ui.klasifikasi.uriToFile
 import com.example.wastewizard.ui.result.ResultActivity
@@ -32,6 +33,11 @@ class UploadActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         apiService = APIModel.getApiModel()
+
+        binding.btnBack.setOnClickListener{
+            val intentBack = Intent(this@UploadActivity, KlasifikasiActivity::class.java)
+            startActivity(intentBack)
+        }
 
         binding.btnUpload.setOnClickListener {
             // Check if imageUri is not null
