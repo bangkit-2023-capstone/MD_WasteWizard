@@ -51,15 +51,10 @@ interface ApiService {
     ): RegisterResponse
 
     @Multipart
-    @POST("upload")
+    @POST("Prediksi")
     fun uploadImage(
-        @Part file: MultipartBody.Part
+        @Part file: MultipartBody.Part,
+        @Field("klasifikasi") klasifikasi: String,
+        @Field("data") data: String
     ): Call<ModelResponse>
-
-    @Multipart
-    @POST("upload")
-    fun uploadImage(
-        @Part image: MultipartBody.Part,
-        @Part("description") description: RequestBody
-    ): Call<UploadResponse>
 }

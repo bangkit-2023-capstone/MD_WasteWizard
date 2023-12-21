@@ -9,6 +9,8 @@ import com.example.wastewizard.data.response.ErrorResponse
 import com.example.wastewizard.data.retrofit.ApiService
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.HttpException
 
 class UserRepository private constructor(
@@ -118,6 +120,21 @@ class UserRepository private constructor(
                 "Login",
                 "Login gagal $email, $password, ${e.message} dan $errorMessage"
             )
+        }
+    }
+
+    fun uploadStory(file: MultipartBody.Part, klasifikasi: String, data: String) = liveData {
+        emit(ResultState.Loading)
+        try {
+            val message = apiService.uploadImage(file, klasifikasi, data)
+            emit(ResultState.Success(message))
+            Log.d("Upload Story", "Upload Story Success $message")
+        } catch (e: HttpException) {
+            val jsonInString = e.response()?.errorBody()?.string()
+            val errorBody = Gson().fromJson(jsonInString, ErrorResponse::class.java)
+            val errorMessage = errorBody.message
+            emit(errorMessage?.let { ResultState.Error(it) })
+            Log.d("Upload Story", " Upload On Failure $errorMessage")
         }
     }
 
