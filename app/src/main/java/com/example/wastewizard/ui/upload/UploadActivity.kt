@@ -64,6 +64,7 @@ class UploadActivity : AppCompatActivity() {
                             // Navigate to ResultActivity and pass the result
                             val intent = Intent(this@UploadActivity, ResultActivity::class.java)
                             intent.putExtra("result", result)
+                            intent.putExtra("compressedImagePath", compressedImageFile.path)
                             startActivity(intent)
 
                         } else {

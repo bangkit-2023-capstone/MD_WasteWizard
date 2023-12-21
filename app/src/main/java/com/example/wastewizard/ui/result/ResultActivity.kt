@@ -1,10 +1,12 @@
 package com.example.wastewizard.ui.result
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wastewizard.data.response.ModelResponse
 import com.example.wastewizard.databinding.ActivityResultBinding
 import com.google.gson.Gson
+import java.io.File
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResultBinding
@@ -27,5 +29,21 @@ class ResultActivity : AppCompatActivity() {
         // Display the result in the TextView
 //        binding.hasilKlasifikasi.text = "Klasifikasi: $klasifikasi\nData: $data"
         binding.hasilKlasifikasi.text = klasifikasi
+
+        val result = intent.getStringExtra("result")
+        // Process the result as needed
+
+        // Retrieve the compressed image file path from the intent
+        val compressedImagePath = intent.getStringExtra("compressedImagePath")
+
+        // Display the compressed image in the preview
+        showCompressedImage(compressedImagePath)
+    }
+
+    private fun showCompressedImage(imagePath: String?) {
+        if (imagePath != null) {
+            val compressedImageFile = File(imagePath)
+            binding.imagePreview.setImageURI(Uri.fromFile(compressedImageFile))
+        }
     }
 }
