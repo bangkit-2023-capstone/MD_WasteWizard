@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/logo_ww" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/btn_back"
         android:layout_width="50dp"
         android:layout_height="64dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView9"
