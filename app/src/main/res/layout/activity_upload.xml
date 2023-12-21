@@ -8,7 +8,7 @@
     tools:context=".ui.upload.UploadActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_upload"
         android:layout_width="291dp"
         android:layout_height="55dp"
         android:elevation="40dp"

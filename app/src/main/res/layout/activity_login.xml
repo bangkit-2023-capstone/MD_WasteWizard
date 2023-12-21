@@ -161,11 +161,11 @@
         android:id="@+id/belumpunyaakun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
+        android:layout_marginStart="12dp"
         android:layout_marginBottom="56dp"
         android:text="@string/createacc"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/loginButton"
         app:layout_constraintTop_toBottomOf="@+id/loginButton"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -177,8 +177,7 @@
         android:textColor="@color/green"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
         app:layout_constraintStart_toEndOf="@+id/belumpunyaakun"
         app:layout_constraintTop_toTopOf="@+id/belumpunyaakun"
         app:layout_constraintVertical_bias="0.0" />
