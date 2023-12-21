@@ -13,7 +13,7 @@ object APIModel {
             .addInterceptor(loggingInterceptor)
             .build()
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://model-sduuhy47ua-uc.a.run.app/Prediksi")
+            .baseUrl("https://model-sduuhy47ua-uc.a.run.app/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

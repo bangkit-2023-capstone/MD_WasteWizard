@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
         val txtSignUp: TextView = findViewById(R.id.txt_signup)
         txtSignUp.setOnClickListener {
             Toast.makeText(this@LoginActivity, "Text Sign Up ditekan", Toast.LENGTH_SHORT).show()
-            Log.d("login", "Login Berhasuk")
+            Log.d("login", "Login Berhasil")
             val moveIntent = Intent(this, SignUp2::class.java)
             startActivity(moveIntent)
         }
