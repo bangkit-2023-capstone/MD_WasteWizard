@@ -1,10 +1,10 @@
 package com.example.wastewizard.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.wastewizard.ui.welcome.MainActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.wastewizard.R
+import com.example.wastewizard.ui.welcome.MainActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -17,7 +17,7 @@ class SplashActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
         CoroutineScope(Dispatchers.Main).launch {
-            delay(6000L)
+            delay(3000L)
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()
         }

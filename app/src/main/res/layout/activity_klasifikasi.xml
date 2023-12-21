@@ -89,6 +89,7 @@
         android:text="@string/galeri"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:onClick="startGaleri"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
@@ -110,16 +111,4 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:layout_width="285dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/white"
-        android:text="@string/upload"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_scan"
-        app:layout_constraintStart_toStartOf="@+id/btn_galeri"
-        app:layout_constraintTop_toBottomOf="@+id/btn_galeri"
-        app:layout_constraintVertical_bias="0.18" />
 </androidx.constraintlayout.widget.ConstraintLayout>
