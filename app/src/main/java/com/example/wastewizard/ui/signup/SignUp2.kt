@@ -90,12 +90,12 @@ class SignUp2: AppCompatActivity() {
 //                            showToast(result.error)
 //                            wrongPassword()
 //                            showLoading(false)
-                            Log.d("Login Error", "$email & $password")
+                            Log.d("Register Error", "$name & $email & $password")
                         }
                     }
                 }
             }
-            Log.d("Login", "$name & $email & $password")
+            Log.d("Register", "$name & $email & $password")
         }
     }
 }

@@ -98,6 +98,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun wrongPassword(){
         val titleWrong = "Uh Oh!"
         val messageWrong = "Email atau Password kamu salah, silahkan Login Kembali"

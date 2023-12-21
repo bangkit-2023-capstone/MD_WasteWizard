@@ -7,6 +7,7 @@ import com.example.wastewizard.data.response.ProfileResponse
 import com.example.wastewizard.data.response.RefreshResponse
 import com.example.wastewizard.data.response.RegisterResponse
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -54,4 +55,11 @@ interface ApiService {
     fun uploadImage(
         @Part file: MultipartBody.Part
     ): Call<ModelResponse>
+
+    @Multipart
+    @POST("upload")
+    fun uploadImage(
+        @Part image: MultipartBody.Part,
+        @Part("description") description: RequestBody
+    ): Call<UploadResponse>
 }

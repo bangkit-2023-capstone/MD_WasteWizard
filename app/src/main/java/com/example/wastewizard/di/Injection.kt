@@ -4,6 +4,7 @@ import android.content.Context
 import com.example.wastewizard.data.UserRepository
 import com.example.wastewizard.data.pref.UserPreference
 import com.example.wastewizard.data.pref.dataStore
+import com.example.wastewizard.data.retrofit.APIModel
 import com.example.wastewizard.data.retrofit.ApiConfig
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
