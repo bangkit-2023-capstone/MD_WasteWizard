@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
         setupView()
         setupAction()
 
-        //Text Sign Up
+
         val txtSignUp: TextView = findViewById(R.id.txt_signup)
         txtSignUp.setOnClickListener {
             Toast.makeText(this@LoginActivity, "Text Sign Up ditekan", Toast.LENGTH_SHORT).show()
